@@ -1,0 +1,22 @@
+
+<div align="center">
+    <div align="left" style="max-width: max-content;" class="loginForm">
+        <div align="center">
+            Acceso
+        </div>
+        <div>
+            <div>
+                <input type="text" [(ngModel)]="user.user"  name="usuario" required placeholder="Usuario"/>
+            </div>
+            <div>
+                <input type="password" [(ngModel)]="user.password"  name="password" required placeholder="Contraseña"/>
+            </div>
+            <div>
+                <input type="checkbox" [(ngModel)] = "user.remember"> Recordar
+            </div>
+            <div align="center">
+                <button (click)="acceder()">Acceder</button>
+            </div>
+        </div>
+    </div>
+</div>
