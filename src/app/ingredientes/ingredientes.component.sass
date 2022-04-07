@@ -1,0 +1,29 @@
+.imagen 
+  max-width: 239px
+
+.random
+    text-align: left
+    box-shadow: 1px 1px 22px 8px blue
+    top: 28px
+    border-radius: 20px
+    padding: 11px
+    max-width: 300px
+    position: absolute
+    z-index: 2
+    background-color: white
+    left: calc(50% - 150px)
+    
+
+.ingredientes
+    display: grid
+    grid-template-columns: auto auto auto auto auto
+    grid-column-gap: 15px
+    grid-row-gap: 15px
+
+@media (max-width:660px)
+    .ingredientes
+        grid-template-columns: auto auto
+
+@media (max-width:350px)
+    .ingredientes
+        grid-template-columns: auto

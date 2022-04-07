@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../user';
 
 @Component({
   selector: 'app-side-bar',
@@ -9,6 +10,14 @@ export class SideBarComponent {
 
   constructor() { }
   
+  
   showFiller = false;
-
+  _user:User = {
+    user: '',
+    password: '',
+    remember: false,
+    nombre: '',
+    apellidos: '',
+    email: ''
+  };
 }

@@ -1,1 +1,17 @@
+
+<mat-drawer-container class="example-container" *ngIf="login.user?.user">
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <button routerLink="/welcome" mat-raised-button>Bienvenida</button><br>
+    <button routerLink="/ingredientes" mat-raised-button>Ingredientes Populares</button><br>
+    <button routerLink="/platillos" mat-raised-button>Platillos</button><br>
+    <button routerLink="/profile" mat-raised-button>Perfil de usuario</button><br>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <button type="button" mat-button (click)="drawer.toggle()">
+      Menu
+    </button>
+  </div>
+</mat-drawer-container>
 <router-outlet></router-outlet>
+

@@ -7,3 +7,12 @@ export class User{
     apellidos:string = "";
     email:string = "";
 }
+
+export let _userLogin:User = {
+    user: "",
+    password: "",
+    remember: false,
+    nombre: "",
+    apellidos: "",
+    email: ""
+};

@@ -1,0 +1,96 @@
+.imagen 
+  max-width: 339px
+
+.platillo
+    height: 200px
+    width: 200px
+    background-position: center
+    background-size: contain
+
+.title
+    padding: 15px
+    background-color: #5E63638C
+    max-width: max-content
+    border-radius: 0px 00px 10px 10px
+    text-shadow: 1px 1px 1px black
+    color: #ffffff
+    text-overflow: clip
+    overflow: hidden
+    max-height: 40px
+
+.random
+    box-shadow: 1px 1px 22px 8px #1f1f21
+    top: 28px
+    border-radius: 20px
+    padding: 11px
+    max-width: 350px
+    min-width: 350px
+    min-height: 350px
+    max-height: 350px
+    position: absolute
+    z-index: 2
+    background-color: white
+    left: calc(50% - 175px)
+    background-position: center
+    background-size: contain
+    .btn
+        position: relative
+        top: 270px
+    
+.listaPlatillos
+    padding: 10px
+    display: grid
+    grid-template-columns: auto auto auto auto auto auto auto
+    grid-column-gap: 15px
+    grid-row-gap: 15px
+    .platillo        
+        margin-bottom:10px
+
+.listaRandPlatillos
+    display: grid
+    grid-template-columns: auto auto auto auto auto
+    border-bottom: 1px solid
+    margin-bottom: 10px
+    grid-column-gap: 5px
+    grid-row-gap: 5px
+    padding: 12px
+    box-shadow: 0px 0px 5px 1px blue
+    margin-top: 12px
+    border-radius:10px
+    .platillo
+        height: 100px
+        width: 100px
+        cursor: pointer
+
+@media (max-width:1060px)
+    .listaPlatillos
+        grid-template-columns: auto auto auto auto
+
+@media (max-width:860px)
+    .listaPlatillos
+        grid-template-columns: auto auto auto
+
+@media (max-width:660px)
+    .listaRandPlatillos
+        grid-template-columns: auto auto auto auto
+    .listaPlatillos
+        grid-template-columns: auto auto
+
+@media (max-width:450px)
+    .listaRandPlatillos
+        grid-template-columns: auto auto auto
+    .listaPlatillos
+        display: inherit
+        grid-template-columns: auto
+    
+    .imagen 
+        max-width: 239px
+
+    .random
+        max-width: 250px
+        min-width: 250px
+        min-height: 250px
+        max-height: 250px
+        left: calc(50% - 125px)
+        .btn
+            top: 170px

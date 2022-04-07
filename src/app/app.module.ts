@@ -13,8 +13,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { CookieService } from 'ngx-cookie-service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSidenavModule} from '@angular/material/sidenav';
-import { SideBarComponent } from './side-bar/side-bar.component'; 
-
+import { SideBarComponent } from './side-bar/side-bar.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,14 +24,15 @@ import { SideBarComponent } from './side-bar/side-bar.component';
     IngredientesComponent,
     PlatillosComponent,
     ProfileComponent,
-    SideBarComponent,
+    SideBarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatSidenavModule
+    MatSidenavModule,
+    HttpClientModule
   ],
   providers: [CookieService],
   bootstrap: [AppComponent]

@@ -1,1 +1,23 @@
-<p>ingredientes works!</p>
+<div *ngIf="ingredientes"  align="center" class="ingredientes">
+    <button *ngFor="let ing of ingredientes[0]" (click)="ingredieteSelected=ing">
+        {{ing.strMeal}}
+    </button>
+</div>
+
+<div *ngIf="ingredieteSelected">
+    <div class="random" >
+        <div>
+            Nombre
+        </div>
+        <div>
+            {{ingredieteSelected.strMeal}}
+        </div>
+            
+        <div align="center">
+            <img class="imagen" src="{{ingredieteSelected.strMealThumb}}"/>
+        </div>
+        <div align="center">
+            <button (click)="ingredieteSelected=false">Cerrar</button>
+        </div>
+    </div>
+</div>

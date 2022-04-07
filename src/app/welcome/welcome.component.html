@@ -1,4 +1,25 @@
-
-<div>
-    
+<div *ngIf="_meal" align="center">
+    <div class="random" >
+        <div>
+            Platillo
+        </div>
+        <div>
+            {{_meal[0].strMeal}}
+        </div>
+        <div>
+            Categoría
+        </div>
+        <div>
+            {{_meal[0].strCategory}}
+        </div>
+        <div>
+            
+        </div>
+        <div>
+            <a href="{{_meal[0].strSource}}" target="_black">
+                <img class="imagen" src="{{_meal[0].strMealThumb}}"/>
+            </a>
+        </div>
+        
+    </div>
 </div>

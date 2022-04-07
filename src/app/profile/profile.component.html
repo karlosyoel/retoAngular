@@ -2,22 +2,31 @@
     <div align="right">
         <button (click)="salirU()">Salir</button>
     </div>
-    <div align="left" style="max-width: max-content;">
+    <div align="left" class="userProfile">
         <div>
-            Nombre: {{_user.nombre}}
+            Nombre
         </div>
         <div>
-            Apellidos: {{_user.apellidos}}
+            {{_user.nombre}}
         </div>
         <div>
-            Correo: {{_user.email}}
+            Apellidos
+        </div>
+        <div>
+            {{_user.apellidos}}
+        </div>
+        <div>
+            Correo
+        </div>
+        <div>
+            {{_user.email}}
         </div>
     </div>
     <button (click)="showUpdate=!showUpdate">Editar</button>
-    <div *ngIf="showUpdate">
-        <input type="text" placeholder="Nombre" required [(ngModel)]="_user.nombre" name="nombre"/><br>
-        <input type="text" placeholder="Apellidos" required [(ngModel)]="_user.apellidos" name="apellidos"/><br>
-        <input type="email" placeholder="Correo" required [(ngModel)]="_user.email" name="email"/><br>
+    <div *ngIf="showUpdate" class="fomrUpdate">
+        <input type="text" placeholder="Nombre" required="required" [(ngModel)]="_user.nombre" name="nombre"/><br>
+        <input type="text" placeholder="Apellidos" required="required" [(ngModel)]="_user.apellidos" name="apellidos"/><br>
+        <input type="email" placeholder="Correo" required="required" [(ngModel)]="_user.email" name="email"/><br>
     
         <button (click)="saveUserData()">Guardar</button>
     </div>

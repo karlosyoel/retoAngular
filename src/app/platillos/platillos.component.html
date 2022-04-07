@@ -1,1 +1,32 @@
-<p>platillos works!</p>
+<div align="center">
+    <input type="text" class="buscar" [(ngModel)]="buscarP" placeholder="Buscar" (ngModelChange)="changeEvent()"/> <button (click)="buscarPlatillo()">Buscar</button>
+</div>
+
+<div *ngIf="listaRandPlatillos" class="listaRandPlatillos " align="center">
+    <div *ngFor="let plat of listaRandPlatillos" class="platillo" style="background-image:url({{plat[0][0].strMealThumb}})" (click)="platilloSelected=plat[0][0]">
+        <div class="title">
+            {{plat[0][0].strMeal}}
+        </div>
+    </div>
+</div>
+
+<div *ngIf="listaPlatillos" class="listaPlatillos" align="center">
+    <div *ngFor="let plat of listaPlatillos[0]" class="platillo" style="background-image: url({{plat.strMealThumb}});">
+        <div class="title">
+            {{plat.strMeal}}
+        </div>
+    </div>
+</div>
+
+<div *ngIf="platilloSelected.strMeal" >
+    <div class="random" style="background-image: url('{{platilloSelected.strMealThumb}}');" align="center">
+        <div  class="title">
+            {{platilloSelected.strMeal}}
+        </div>
+         
+        <div align="center">
+            <button (click)="platilloSelected=false" class="btn">Cerrar</button>
+        </div>
+    </div>
+</div>
+

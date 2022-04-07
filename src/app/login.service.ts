@@ -3,7 +3,6 @@ import { Observable, of} from "rxjs";
 import { User } from './user';
 import { CookieService } from 'ngx-cookie-service';
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -11,7 +10,7 @@ export class LoginService {
 
   constructor(private cookie:CookieService) { }
 
-  user?: User;
+  user?:User;
   key = "_login"
 
   salir(): Observable<boolean>{
@@ -27,7 +26,6 @@ export class LoginService {
   }
   
   login(user: User): Observable<boolean> {
-
     if(user.user == "root" && user.password=="root"){
       this.user = user;
       if(user.remember){
